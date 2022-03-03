@@ -61,6 +61,11 @@ class Account
         if (!$this->logged) return false;
         else return true;
     }
+
+    public function setDiscount($logged)
+    {
+        return ($logged) ? 'Sconto 20%' : 'Nessuno sconto';
+    }
 }
 
 $person = new Account('Nicolas', 'Maranzano', 32, 948349893483);
