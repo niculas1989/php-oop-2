@@ -6,7 +6,6 @@ require_once __DIR__ . '/Account.php';
     $circuit;
     $code;
     $expiration_date; (verificare che non sia scaduta)
-    $card_name;
 } 
 */
 
@@ -15,5 +14,12 @@ class Card extends Account
     private $circuit;
     private $code;
     private $expiration_date;
-    private $card_name;
+
+    public function __construct($first_name, $last_name, $age, $card, $circuit, $code, $expiration_date)
+    {
+        parent::__construct($first_name, $last_name, $age);
+        $this->circuit = $circuit;
+        $this->code = $code;
+        $this->expiration_date = $expiration_date;
+    }
 }

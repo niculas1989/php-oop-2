@@ -7,25 +7,21 @@
     $last_name;
     $age;
     $card; (verificare che non sia scaduta)
-    $logged (si aspetto un booleano come risposta)
 } 
 */
 
+// TODO creare una LOGIN
 class Account
 {
     protected string $first_name;
     protected string $last_name;
     protected int $age;
-    protected string $card;
-    protected bool $logged;
 
-    public function __construct($first_name, $last_name, $age, $card, $logged = null)
+    public function __construct($first_name, $last_name, $age)
     {
         $this->setFirstName($first_name);
         $this->setLastName($last_name);
         $this->setAge($age);
-        $this->setCard($card);
-        $this->setLogged($logged);
     }
 
     public function getFirstName()
@@ -56,22 +52,6 @@ class Account
     public function setAge($age)
     {
         $this->age = $age;
-    }
-
-    public function getCard()
-    {
-        return $this->card;
-    }
-
-    public function setCard($card)
-    {
-        $this->card = $card;
-    }
-
-    protected function setLogged($logged)
-    {
-        if (!$logged) return false;
-        return true;
     }
 }
 
