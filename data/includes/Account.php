@@ -9,8 +9,6 @@
     $card; (verificare che non sia scaduta)
 } 
 */
-
-// TODO creare una LOGIN
 class Account
 {
     protected string $first_name;
@@ -67,7 +65,3 @@ class Account
         return ($logged) ? 'Sconto 20%' : 'Nessuno sconto';
     }
 }
-
-$person = new Account('Nicolas', 'Maranzano', 32, 948349893483);
-
-var_dump($person);
