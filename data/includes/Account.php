@@ -71,6 +71,7 @@ class Account
     protected function setLogged($logged)
     {
         if (!$logged) return false;
+        return true;
     }
 }
 
