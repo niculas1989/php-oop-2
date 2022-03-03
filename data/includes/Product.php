@@ -16,3 +16,10 @@
     $type; (può essere corto, lungo, a strozzo ..)
 }
 */
+
+class Product
+{
+    public $name;
+    public $brand;
+    public $amount;
+}
