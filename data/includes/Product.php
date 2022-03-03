@@ -79,4 +79,24 @@ class SelectedProduct extends Product
         $this->setAnimal($animal);
         $this->setType($type);
     }
+
+    public function setColor($color)
+    {
+        $this->color = $color;
+    }
+
+    public function getColor()
+    {
+        return $this->color;
+    }
+
+    public function setPrice($price)
+    {
+        $this->price = $price;
+    }
+
+    public function getPrice()
+    {
+        return $this->price;
+    }
 }
