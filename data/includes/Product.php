@@ -22,4 +22,21 @@ class Product
     public $name;
     public $brand;
     public $amount;
+
+    public function __construct($name, $brand, $amount)
+    {
+        $this->setName($name);
+        $this->brand = $brand;
+        $this->amount = $amount;
+    }
+
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+
+    public function getName()
+    {
+        return $this->name;
+    }
 }
