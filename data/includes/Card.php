@@ -1,5 +1,5 @@
 <?php
-
+require_once __DIR__ . '/Account.php';
 /* 
 3 - una classe che ha le seguenti caratteristiche
 ) Card {
@@ -9,3 +9,7 @@
     $card_name;
 } 
 */
+
+class Card extends Account
+{
+}
