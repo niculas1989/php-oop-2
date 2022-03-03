@@ -19,7 +19,7 @@ class Account
     protected $card;
     protected $logged;
 
-    public function __construct($first_name, $last_name, $age, $card, $logged)
+    public function __construct($first_name, $last_name, $age, $card, $logged = null)
     {
         $this->setFirstName($first_name);
         $this->setLastName($last_name);
@@ -55,7 +55,7 @@ class Account
 
     public function setAge($age)
     {
-        $this->eta = $age;
+        $this->age = $age;
     }
 
     public function getCard()
@@ -73,3 +73,7 @@ class Account
         if (!$logged) return false;
     }
 }
+
+$person = new Account('Nicolas', 'Maranzano', 32, 948349893483);
+
+var_dump($person);
