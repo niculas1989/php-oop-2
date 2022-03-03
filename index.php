@@ -19,4 +19,38 @@ Non cercate di strafare, concentratevi sulle classi e le loro proprietà metodi,
 */
 
 /*
-//! provato ad utilizzare Draw-io, ma non mi viene comodo. Provo a schematizzare qui
+//! Ho provato ad utilizzare Draw-io, ma non mi viene comodo. Provo a schematizzare qui
+
+1 - una classe che ha le seguenti caratteristiche
+) Account {
+    $first_name;
+    $last_name;
+    $age;
+    $card; (verificare che non sia scaduta)
+    $logged (si aspetto un booleano come risposta)
+}
+
+2 - una classe che ha le seguenti caratteristiche
+) Product {
+    $name;
+    $brand;
+    $amount;
+}
+
+2a - una classe, figlia della 2, che ha le caratteristiche del padre con in più le seguenti:
+) SelectedProduct {
+    $color;
+    $price;
+    $animal; (per che animale serve)
+    $type; (può essere corto, lungo, a strozzo ..)
+}
+
+3 - una classe che ha le seguenti caratteristiche
+) Card {
+    $name_owner;
+    $code;
+    $expiration_date; (verificare che non sia scaduta)
+    $card_name;
+}
+
+
