@@ -28,7 +28,7 @@ class Product
     {
         $this->setName($name);
         $this->setBrand($brand);
-        $this->amount = $amount;
+        $this->setAmount($amount);
     }
 
     public function setName($name)
@@ -66,4 +66,8 @@ class Product
 // TODO per adesso la scrivo qui, poi vedo di spostarla in un file esterno per importarla. Step by step.
 class SelectedProduct extends Product
 {
+    public $color;
+    public $price;
+    public $animal; //# (per che tipologia di animale serve)
+    public $type;
 }
