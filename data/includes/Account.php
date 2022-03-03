@@ -16,12 +16,14 @@ class Account
     protected string $first_name;
     protected string $last_name;
     protected int $age;
+    protected bool $logged;
 
-    public function __construct($first_name, $last_name, $age)
+    public function __construct($first_name, $last_name, $age, $logged)
     {
         $this->setFirstName($first_name);
         $this->setLastName($last_name);
         $this->setAge($age);
+        $this->isLogged($logged);
     }
 
     public function getFirstName()
@@ -52,6 +54,12 @@ class Account
     public function setAge($age)
     {
         $this->age = $age;
+    }
+
+    public function isLogged()
+    {
+        if (!$this->logged) return false;
+        else return true;
     }
 }
 

@@ -15,9 +15,9 @@ class Card extends Account
     private $code;
     private $expiration_date;
 
-    public function __construct($first_name, $last_name, $age, $circuit, $code, $expiration_date)
+    public function __construct($first_name, $last_name, $age, $logged, $circuit, $code, $expiration_date)
     {
-        parent::__construct($first_name, $last_name, $age);
+        parent::__construct($first_name, $last_name, $age, $logged);
         $this->setCircuit($circuit);
         $this->setCode($code);
         $this->setExpirationDate($expiration_date);
