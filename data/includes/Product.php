@@ -70,4 +70,13 @@ class SelectedProduct extends Product
     public $price;
     public $animal; //# (per che tipologia di animale serve)
     public $type;
+
+    public function __construct($name, $brand, $amount, $color, $price, $animal, $type)
+    {
+        parent::__construct($name, $brand, $amount);
+        $this->setColor($color);
+        $this->setPrice($price);
+        $this->setAnimal($animal);
+        $this->setType($type);
+    }
 }
