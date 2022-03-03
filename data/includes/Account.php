@@ -13,11 +13,11 @@
 
 class Account
 {
-    protected $first_name;
-    protected $last_name;
-    protected $age;
-    protected $card;
-    protected $logged;
+    protected string $first_name;
+    protected string $last_name;
+    protected int $age;
+    protected string $card;
+    protected bool $logged;
 
     public function __construct($first_name, $last_name, $age, $card, $logged = null)
     {
