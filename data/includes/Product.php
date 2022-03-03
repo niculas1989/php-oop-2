@@ -17,6 +17,7 @@
 }
 */
 
+//! Inizzializzo la classe Product
 class Product
 {
     public $name;
@@ -26,7 +27,7 @@ class Product
     public function __construct($name, $brand, $amount)
     {
         $this->setName($name);
-        $this->brand = $brand;
+        $this->setBrand($brand);
         $this->amount = $amount;
     }
 
@@ -39,4 +40,30 @@ class Product
     {
         return $this->name;
     }
+
+    public function setBrand($brand)
+    {
+        $this->brand = $brand;
+    }
+
+    public function getBrand()
+    {
+        return $this->brand;
+    }
+
+    public function setAmount($amount)
+    {
+        $this->amount = $amount;
+    }
+
+    public function getAmount()
+    {
+        return $this->amount;
+    }
+}
+
+//! Inizzializzo la casse SelectedProduct - figlia di Product.
+// TODO per adesso la scrivo qui, poi vedo di spostarla in un file esterno per importarla. Step by step.
+class SelectedProduct extends Product
+{
 }
