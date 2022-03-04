@@ -66,6 +66,6 @@ class Account
 
     public function setDiscount($logged)
     {
-        return ($logged) ? 'Sconto 20%' : 'Nessuno sconto';
+        return ($logged) ? true : false;
     }
 }
