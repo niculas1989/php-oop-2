@@ -32,11 +32,6 @@ class SelectedProduct extends Product
         $this->price = $price;
     }
 
-    public function getPrice()
-    {
-        return $this->price;
-    }
-
     public function setAnimal($animal)
     {
         $this->animal = $animal;
@@ -50,10 +45,5 @@ class SelectedProduct extends Product
     public function setType($type)
     {
         $this->type = $type;
-    }
-
-    public function getType()
-    {
-        return $this->type;
     }
 }
