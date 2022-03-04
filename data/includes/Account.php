@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/Address.php';
+
 /*
 1 - una classe che ha le seguenti caratteristiche
 ) Account {
@@ -11,6 +13,8 @@
 */
 class Account
 {
+    use Address;
+
     protected string $first_name;
     protected string $last_name;
     protected int $age;
