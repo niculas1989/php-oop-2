@@ -9,9 +9,9 @@ class SelectedProduct extends Product
     public $height;
     public $width;
 
-    public function __construct($color, $type, $material, $height, $width)
+    public function __construct($name, $code, $brand, $quantity, $description, $animal, $color, $type, $material, $height, $width)
     {
-        parent::__construct($name, $code, $brand, $quantity, $description, $animal)
+        parent::__construct($name, $code, $brand, $quantity, $description, $animal);
         $this->setColor($color);
         $this->setType($type);
         $this->setMaterial($material);
