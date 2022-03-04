@@ -21,14 +21,20 @@
 class Product
 {
     public $name;
+    public $code;
     public $brand;
-    public $amount;
+    public $quantity;
+    public $description;
+    public $animal;
 
-    public function __construct($name, $brand, $amount)
+    public function __construct($name, $code, $brand, $quantity, $description, $animal)
     {
         $this->setName($name);
+        $this->setCode($code);
         $this->setBrand($brand);
-        $this->setAmount($amount);
+        $this->setQuantity($quantity);
+        $this->setDescription($description);
+        $this->setAnimal($animal);
     }
 
     public function setName($name)
@@ -41,6 +47,36 @@ class Product
         return $this->name;
     }
 
+    public function setAnimal($animal)
+    {
+        $this->animal = $animal;
+    }
+
+    public function getAnimal()
+    {
+        return $this->animal;
+    }
+
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    public function setCode($code)
+    {
+        $this->code = $code;
+    }
+
+    public function getCode()
+    {
+        return $this->code;
+    }
+
     public function setBrand($brand)
     {
         $this->brand = $brand;
@@ -51,13 +87,13 @@ class Product
         return $this->brand;
     }
 
-    public function setAmount($amount)
+    public function setQuantity($quantity)
     {
-        $this->amount = $amount;
+        $this->quantity = $quantity;
     }
 
-    public function getAmount()
+    public function getQuantity()
     {
-        return $this->amount;
+        return $this->quantity;
     }
 }
