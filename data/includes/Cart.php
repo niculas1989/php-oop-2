@@ -15,6 +15,11 @@ class Cart
         $this->setProduct($product);
     }
 
+    public function setSelectedProduct($product)
+    {
+        if ($product instanceof Product);
+    }
+
     /**
      * Get the value of product
      */
