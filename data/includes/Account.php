@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__ . '/Address.php';
+require_once __DIR__ . '/Card.php';
 
 /*
 1 - una classe che ha le seguenti caratteristiche
@@ -18,14 +19,22 @@ class Account
     protected string $first_name;
     protected string $last_name;
     protected int $age;
+    public $card;
     protected bool $logged;
 
-    public function __construct($first_name, $last_name, $age, $logged)
+    public function __construct($first_name, $last_name, $age, $card, $logged = false)
     {
         $this->setFirstName($first_name);
         $this->setLastName($last_name);
         $this->setAge($age);
+        $this->setCard($card);
         $this->isLogged($logged);
+    }
+
+    private function setCard($card)
+    {
+        if (!$card instanceof Card) return false;
+        $this->card = $card;
     }
 
     public function getFirstName()

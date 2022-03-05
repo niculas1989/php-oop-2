@@ -13,7 +13,7 @@ class Cart
 
     public function __construct($products, $discount = 0)
     {
-        $this->setProduct($products);
+        $this->setProducts($products);
     }
 
     /**
