@@ -14,13 +14,15 @@ class Card extends Account
     private $circuit;
     private $code;
     private $expiration_date;
+    private $balance;
 
-    public function __construct($first_name, $last_name, $age, $logged, $circuit, $code, $expiration_date)
+    public function __construct($first_name, $last_name, $age, $logged, $circuit, $code, $expiration_date, $balance = 0)
     {
         parent::__construct($first_name, $last_name, $age, $logged);
         $this->setCircuit($circuit);
         $this->setCode($code);
         $this->setExpirationDate($expiration_date);
+        $this->setBalance($balance);
     }
 
     public function setCircuit($circuit)
@@ -51,5 +53,25 @@ class Card extends Account
     public function getExpirationDate()
     {
         return $this->expiration_date;
+    }
+
+    /**
+     * Get the value of balance
+     */
+    public function getBalance()
+    {
+        return $this->balance;
+    }
+
+    /**
+     * Set the value of balance
+     *
+     * @return  self
+     */
+    public function setBalance($balance)
+    {
+        $this->balance = $balance;
+
+        return $this;
     }
 }
