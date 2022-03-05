@@ -29,7 +29,7 @@ class Account
         $this->setLastName($last_name);
         $this->setAge($age);
         $this->setCard($card);
-        $this->isLogged($logged);
+        $this->logged = $logged;
         $this->discount = $this->setDiscount();
     }
 
@@ -72,12 +72,6 @@ class Account
     public function setAge($age)
     {
         $this->age = $age;
-    }
-
-    public function isLogged()
-    {
-        if (!$this->logged) return false;
-        else return true;
     }
 
     //! Logica per comprare qualcosa:

@@ -1,27 +1,18 @@
 <?php
-require_once __DIR__ . '/Account.php';
-require_once __DIR__ . '/Adress.php';
-/* 
-3 - una classe che ha le seguenti caratteristiche
-) Card {
-    $circuit;
-    $code;
-    $expiration_date; (verificare che non sia scaduta)
-} 
-*/
+require_once __DIR__ . '/Address.php';
 
-class Card extends Account
+
+class Card
 {
     private $circuit;
     private $code;
-    private $expiration_date;
-    private $balance;
+    private int $expiration_date;
+    private int $balance;
 
     use Address;
 
-    public function __construct($first_name, $last_name, $age, $card, $circuit, $code, $expiration_date, $balance = 0)
+    public function __construct($circuit, $code, $expiration_date, $balance = 0)
     {
-        parent::__construct($first_name, $last_name, $age, $card);
         $this->setCircuit($circuit);
         $this->setCode($code);
         $this->setExpirationDate($expiration_date);
