@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/Account.php';
+require_once __DIR__ . '/Adress.php';
 /* 
 3 - una classe che ha le seguenti caratteristiche
 ) Card {
@@ -15,6 +16,8 @@ class Card extends Account
     private $code;
     private $expiration_date;
     private $balance;
+
+    use Address;
 
     public function __construct($first_name, $last_name, $age, $logged, $circuit, $code, $expiration_date, $balance = 0)
     {
