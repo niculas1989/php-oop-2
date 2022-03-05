@@ -11,11 +11,6 @@ class Cart
     protected $products = [];
     protected $discount;
 
-    public function __construct($products, $discount = 0)
-    {
-        $this->setProducts($products);
-    }
-
     /**
      * Get the value of product
      */

@@ -17,4 +17,15 @@ $account->setAddress('Italia', 'Palermo', 'Via degli arei', '90100');
 var_dump($account);
 
 
+$toy = new Product('Pallina', '23', 'giocoPerCani', 3, 'Gioco per cani', 'Cane', 5);
+
+$food = new Product('Crocchette', '2', 'mangiarePerGatto', 3, 'Mangiare per gatto', 'Gatto', 10);
+
 $cart = new Cart();
+
+try {
+    $cart->setProducts([$toy, $food]);
+    var_dump($cart);
+} catch (Exception $e) {
+    echo $e->getMessage();
+}

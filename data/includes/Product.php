@@ -24,7 +24,7 @@ class Product
     public $price;
     public $code;
     public $brand;
-    public $quantity;
+    public int $quantity;
     public $description;
     public $animal;
 
