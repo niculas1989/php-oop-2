@@ -8,16 +8,12 @@ require_once __DIR__ . '/Account.php';
 
 class Cart
 {
-    protected $product;
+    protected $products = [];
+    protected $discount;
 
-    public function __construct($product)
+    public function __construct($products, $discount = 0)
     {
-        $this->setProduct($product);
-    }
-
-    public function setSelectedProduct($product)
-    {
-        if ($product instanceof Product);
+        $this->setProduct($products);
     }
 
     /**
@@ -33,10 +29,11 @@ class Cart
      *
      * @return  self
      */
-    public function setProduct($product)
+    public function setProducts($products)
     {
-        $this->product = $product;
-
-        return $this;
+        foreach ($products as $product) {
+            if (!$product instanceof Product) throw new Exception('Not a Product');
+            $this->products[$product->getName()] = $product;
+        }
     }
 }
