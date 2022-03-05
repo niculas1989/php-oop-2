@@ -21,13 +21,14 @@
 class Product
 {
     public $name;
+    public $price;
     public $code;
     public $brand;
     public $quantity;
     public $description;
     public $animal;
 
-    public function __construct($name, $code, $brand, $quantity, $description, $animal)
+    public function __construct($name, $code, $brand, $quantity, $description, $animal, $price)
     {
         $this->setName($name);
         $this->setCode($code);
@@ -35,6 +36,7 @@ class Product
         $this->setQuantity($quantity);
         $this->setDescription($description);
         $this->setAnimal($animal);
+        $this->setPrice($price);
     }
 
     public function setName($name)
@@ -95,5 +97,25 @@ class Product
     public function getQuantity()
     {
         return $this->quantity;
+    }
+
+    /**
+     * Get the value of price
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    /**
+     * Set the value of price
+     *
+     * @return  self
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
+
+        return $this;
     }
 }

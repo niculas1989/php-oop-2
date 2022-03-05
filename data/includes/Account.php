@@ -20,6 +20,7 @@ class Account
     protected string $last_name;
     protected int $age;
     public $card;
+    public $discount;
     protected bool $logged;
 
     public function __construct($first_name, $last_name, $age, $card, $logged = false)
@@ -29,6 +30,12 @@ class Account
         $this->setAge($age);
         $this->setCard($card);
         $this->isLogged($logged);
+        $this->discount = $this->setDiscount();
+    }
+
+    private function setDiscount()
+    {
+        return $this->logged ? $this->discount = 20 : $this->discount = 0;
     }
 
     private function setCard($card)
@@ -73,8 +80,32 @@ class Account
         else return true;
     }
 
-    public function setDiscount($logged)
+    //! Logica per comprare qualcosa:
+
+    public function buyProduct($product)
     {
-        return ($logged) ? true : false;
+        if ($this->card->expiration_date < date('Y')) {
+            return '<strong>La tua Carta è scaduta! Si prega di inserirne un altra.</strong>';
+        } else {
+            if ($product->price > $this->card->balance) {
+                return '<strong>Transazione rifiutata, fondi non sufficenti.</strong>';
+            } else {
+                if ($this->discount > 0) {
+                    $price = $product->price - $product->price / 100 * $this->discount;
+                    $this->card->balance -= $price;
+                    return "Transazione approvata, id prodotto: $product->name, Prodotto:" . $product->getName() . ", hai ricevuto uno sconto del $this->discount% ed hai speso $price €";
+                } else {
+                    $this->card->balance -= $product->price;
+                    return "Transazione approvata, id prodotto: $product->name, Prodotto:" . $product->getName() . ",  hai speso $product->price €";
+                }
+            }
+        }
+    }
+
+    public function buyProducts($products)
+    {
+        foreach ($products as $product) {
+            $this->buyProduct($product);
+        }
     }
 }
