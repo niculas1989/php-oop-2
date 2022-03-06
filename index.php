@@ -50,7 +50,9 @@ try {
             <li> <?= "Delle" . ' ' . $product->getName() . ' ' . 'spendendo' . ' ' . $product->getPrice() . '€' ?></li>
         <?php }; ?>
     </ul>
-    <!-- <h3><?= $account->buyProduct($cart->getProduct()) ?></h3> -->
+
+
+    <h3><?= $account->buyProduct($cart->getProduct()) ?></h3>
 </body>
 
 </html>

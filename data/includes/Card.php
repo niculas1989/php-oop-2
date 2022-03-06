@@ -6,7 +6,7 @@ class Card
 {
     private $circuit;
     private $code;
-    private int $expiration_date;
+    public int $expiration_date;
     private int $balance;
 
     use Address;
