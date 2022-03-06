@@ -8,15 +8,15 @@ require_once __DIR__ . '/Account.php';
 
 class Cart
 {
-    protected $products = [];
-    protected $discount;
+    public $products = [];
+    public $discount;
 
     /**
      * Get the value of product
      */
     public function getProduct()
     {
-        return $this->product;
+        return $this->products;
     }
 
     /**
